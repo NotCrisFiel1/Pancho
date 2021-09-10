@@ -65,7 +65,7 @@ const command = comm
 const arg = chats.slice(command.length + 2, chats.length)
 const args = budy.trim().split(/ +/).slice(1)
 const isCmd = budy.startsWith(prefix)
-const q = args.join('Hola')
+const q = args.join(' ')
 const soyYo = client.user.jid
 const botNumber = client.user.jid.split("@")[0]
 const ownerNumber = ['5216681929799@s.whatsapp.net']
@@ -76,6 +76,9 @@ const isMe = senderNumber == botNumber
 const conts = sam.key.fromMe ? client.user.jid : client.contacts[sender] || { notify: jid.replace(/@.+/, '') }
 const pushname = sam.key.fromMe ? client.user.name : conts.notify || conts.vname || conts.name || '-'
 
+if(body.includes('Hola')) {
+client.sendMessage(from, 'como estas!', MessageType.text, {quoted: sam})
+}
 switch (command) {
 
 case 'bot':
