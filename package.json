@@ -1,0 +1,12 @@
+{
+  "name": "Pancho",
+  "version": "0.0.0",
+  "description": "",
+  "main": "Pancho1.js",
+  "scripts": {
+  "start": "node Pancho1.js"
+  },
+  "dependencies": {
+    "@adiwajshing/baileys": "^3.4.1"
+  }
+}
